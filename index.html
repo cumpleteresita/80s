@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eee5d9">
+  <meta name="description" content="Celebremos juntos los 80 años de Teresita Borja. 21 de noviembre de 2026, 14:00.">
+  <title>Teresita Borja · 80 años</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="cover" id="inicio">
+      <div class="cover-inner">
+        <p class="eyebrow">UNA VIDA EXTRAORDINARIA · UNA CELEBRACIÓN ESPECIAL</p>
+        <div class="portrait-wrap">
+          <img class="portrait" src="assets/teresita.jpg" alt="Teresita Borja, rodeada de rosas y sosteniendo una corona">
+          <span class="portrait-caption">Con todo nuestro cariño</span>
+        </div>
+        <div class="number-lockup" aria-label="80 años">
+          <span class="number">80</span>
+          <span class="years">AÑOS</span>
+        </div>
+        <h1>Teresita Borja</h1>
+        <p class="intro">Una vida llena de historias, amor y momentos inolvidables.</p>
+        <a class="button button-dark" href="#celebracion">Descubrir invitación <span>↓</span></a>
+        <div class="cover-rule"><i></i></div>
+      </div>
+      <span class="side-note">21 · 11 · 2026</span>
+    </section>
+
+    <section class="message section-pad" id="celebracion">
+      <p class="eyebrow">CON MUCHA ALEGRÍA</p>
+      <h2>Hay momentos que merecen celebrarse<br><em>y personas que hacen la vida especial.</em></h2>
+      <p class="body-copy">Nos llena de felicidad invitarte a compartir una fecha muy especial: los 80 años de nuestra querida Teresita. Queremos celebrar su vida, sus recuerdos y todo el cariño que nos une.</p>
+      <div class="rose-divider" aria-hidden="true">✳</div>
+    </section>
+
+    <section class="details section-pad">
+      <p class="eyebrow">RESERVA ESTA FECHA</p>
+      <div class="date-card">
+        <span class="day">21</span>
+        <div class="date-meta"><span>SÁBADO</span><strong>NOVIEMBRE</strong><span>2026</span></div>
+        <span class="date-line"></span>
+        <div class="time"><span>HORA</span><strong>14:00</strong></div>
+      </div>
+      <div class="venue">
+        <span class="mini-label">EL LUGAR</span>
+        <h2>Miami Convenciones<br>y Eventos</h2>
+        <p>Será un gusto compartir contigo esta celebración.</p>
+        <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&query=Miami+Convenciones+y+Eventos+Ecuador" target="_blank" rel="noopener">Abrir ubicación <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="rsvp section-pad">
+      <div class="rsvp-card">
+        <p class="eyebrow">TU PRESENCIA ES NUESTRO MEJOR REGALO</p>
+        <h2>¿Nos acompañas?</h2>
+        <p class="body-copy">Por favor, confirma tu asistencia para ayudarnos a preparar cada detalle de este día.</p>
+        <button class="button button-red" id="open-rsvp" type="button">Confirmar asistencia <span>↗</span></button>
+        <p class="small-note">La confirmación se enviará por WhatsApp.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-80">80</div>
+      <p class="signature">Con cariño, te esperamos.</p>
+      <p class="footer-name">TERESITA BORJA</p>
+      <p class="footer-date">21 · NOVIEMBRE · 2026</p>
+    </footer>
+  </main>
+
+  <dialog id="rsvp-dialog" class="rsvp-dialog">
+    <form id="rsvp-form" method="dialog">
+      <button class="close" type="button" id="close-rsvp" aria-label="Cerrar">×</button>
+      <p class="eyebrow">80 AÑOS DE TERESITA</p>
+      <h2>Confirma tu asistencia</h2>
+      <label>Nombre y apellido
+        <input id="guest-name" name="name" required maxlength="90" placeholder="Tu nombre">
+      </label>
+      <label>¿Podrás acompañarnos?
+        <select id="attendance" name="attendance" required>
+          <option value="Sí, asistiré">Sí, asistiré con mucho gusto</option>
+          <option value="No podré asistir">Lamentablemente no podré asistir</option>
+        </select>
+      </label>
+      <label>¿Cuántas personas asistirán incluyéndote?
+        <select id="guests" name="guests">
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+        </select>
+      </label>
+      <button class="button button-red submit" type="submit">Enviar por WhatsApp ↗</button>
+      <p class="small-note">Se abrirá WhatsApp con tu respuesta lista para enviar.</p>
+    </form>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+INVITACIÓN DIGITAL · TERESITA BORJA 80 AÑOS
+
+ARCHIVOS
+- index.html: contenido de la invitación.
+- styles.css: diseño adaptable a celular y computadora.
+- script.js: interacción del formulario de confirmación.
+- assets/teresita.jpg: fotografía original proporcionada.
+
+PUBLICAR EN GITHUB PAGES
+1. Entra a tu repositorio 80-a-os-Teresita.
+2. Pulsa Add file > Upload files.
+3. Sube index.html, styles.css, script.js y la carpeta assets completa.
+4. Pulsa Commit changes.
+5. Abre Settings > Pages.
+6. En Build and deployment selecciona Deploy from a branch.
+7. Selecciona la rama main y la carpeta /(root), y guarda.
+8. Espera a que GitHub publique el sitio. El enlace aparecerá en Settings > Pages.
+
+CONFIRMACIONES
+Por ahora el formulario prepara un mensaje de WhatsApp. Para que se envíe directamente a una persona específica, abre script.js y escribe el número de WhatsApp en la variable whatsappNumber, con código de país, sin + ni espacios. Ejemplo de formato: 5939XXXXXXXX.
+
+UBICACIÓN
+El botón abre una búsqueda de Google Maps de “Miami Convenciones y Eventos Ecuador”. Cuando tengas el pin exacto del lugar, reemplaza el enlace del botón en index.html por el enlace Compartir de Google Maps.
+
+NOTA
+La invitación usa la fotografía original suministrada. El formulario no guarda respuestas en una base de datos; el invitado debe pulsar Enviar en WhatsApp. Si deseas un registro automático, luego conectamos un Google Form y una hoja de cálculo.
