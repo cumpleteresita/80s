@@ -83,7 +83,6 @@ const botonAbrir = document.getElementById("open-rsvp");
 const botonCerrar = document.getElementById("close-rsvp");
 const nombreInput = document.getElementById("guest-name");
 const asistencia = document.getElementById("attendance");
-const selectorAnterior = document.getElementById("guests");
 
 function crearOpciones(maximo, seleccionado) {
   return Array.from({ length: maximo + 1 }, (_, numero) =>
@@ -91,27 +90,38 @@ function crearOpciones(maximo, seleccionado) {
   ).join("");
 }
 
-if (familia && selectorAnterior) {
+if (familia) {
   nombreInput.value = familia.contacto;
 
-  const etiqueta = selectorAnterior.closest("label");
+  const invitacion = document.getElementById("family-invite");
+  const nombreFamilia = document.getElementById("family-name");
+  const pasesFamilia = document.getElementById("family-passes");
+  const textoConfirmacion = document.querySelector(".rsvp-card .body-copy");
+  const etiquetaAnterior = document.getElementById("guests").closest("label");
 
-  etiqueta.innerHTML = `
+  invitacion.hidden = false;
+  nombreFamilia.textContent = familia.nombre;
+  pasesFamilia.textContent =
+    `Pases reservados: ${familia.adultos} adultos y ${familia.ninos} niños`;
+
+  textoConfirmacion.textContent =
+    `Esta invitación está dirigida a ${familia.nombre}. Nos encantará compartir contigo esta celebración.`;
+
+  document.getElementById("rsvp-family").textContent = familia.nombre;
+
+  etiquetaAnterior.innerHTML = `
     <span>¿Cuántos adultos asistirán? (Máximo ${familia.adultos})</span>
     <select id="adultos" name="adultos" required>
-      ${crearOpciones(familia.adultos, Math.min(1, familia.adultos))}
+      ${crearOpciones(familia.adultos, familia.adultos)}
     </select>
-    <span style="display:block;margin-top:14px">¿Cuántos niños asistirán? (Máximo ${familia.ninos})</span>
+
+    <span style="display:block;margin-top:14px">
+      ¿Cuántos niños asistirán? (Máximo ${familia.ninos})
+    </span>
     <select id="ninos" name="ninos" required>
-      ${crearOpciones(familia.ninos, 0)}
+      ${crearOpciones(familia.ninos, familia.ninos)}
     </select>
   `;
-
-  const texto = document.querySelector(".rsvp-card .body-copy");
-
-  if (texto) {
-    texto.textContent = `Esta invitación está dirigida a ${familia.nombre}. Nos encantará compartir contigo esta celebración.`;
-  }
 }
 
 if (botonAbrir) {
@@ -126,7 +136,9 @@ if (botonAbrir) {
 }
 
 if (botonCerrar) {
-  botonCerrar.addEventListener("click", () => dialog.close());
+  botonCerrar.addEventListener("click", () => {
+    dialog.close();
+  });
 }
 
 if (formulario) {
@@ -148,14 +160,11 @@ if (formulario) {
         return;
       }
 
-      if (adultos > familia.adultos || ninos > familia.ninos) {
-        alert("La cantidad seleccionada supera los cupos de esta invitación.");
-        return;
-      }
-
-      mensaje = `Hola, soy ${nombre}. Sí, asistiré. Número de personas: ${adultos} adultos y ${ninos} niños. Confirmo para la celebración de los 80 años de Teresita Borja, el 21 de noviembre de 2026.`;
+      mensaje =
+        `Hola, soy ${nombre}. Sí, asistiré. Número de personas: ${adultos} adultos y ${ninos} niños. Confirmo para la celebración de los 80 años de Teresita Borja, el 21 de noviembre de 2026.`;
     } else {
-      mensaje = `Hola, soy ${nombre}. No podré asistir a la celebración de los 80 años de Teresita Borja, el 21 de noviembre de 2026.`;
+      mensaje =
+        `Hola, soy ${nombre}. No podré asistir a la celebración de los 80 años de Teresita Borja, el 21 de noviembre de 2026.`;
     }
 
     const whatsappNumber = "";
