@@ -16,19 +16,30 @@
     <section class="cover" id="inicio">
       <div class="cover-inner">
         <p class="eyebrow">UNA VIDA EXTRAORDINARIA · UNA CELEBRACIÓN ESPECIAL</p>
+
         <div class="portrait-wrap">
           <img class="portrait" src="teresita3.jpg" alt="Teresita Borja, rodeada de rosas y sosteniendo una corona">
           <span class="portrait-caption">Con todo nuestro cariño</span>
         </div>
+
         <div class="number-lockup" aria-label="80 años">
           <span class="number">80</span>
           <span class="years">AÑOS</span>
         </div>
+
         <h1>Teresita Borja</h1>
         <p class="intro">Una vida llena de historias, amor y momentos inolvidables.</p>
+
+        <div class="family-invite" id="family-invite" hidden>
+          <span class="family-label">INVITACIÓN ESPECIAL PARA</span>
+          <strong id="family-name">Familia invitada</strong>
+          <span class="family-passes" id="family-passes"></span>
+        </div>
+
         <a class="button button-dark" href="#celebracion">Descubrir invitación <span>↓</span></a>
         <div class="cover-rule"><i></i></div>
       </div>
+
       <span class="side-note">21 · 11 · 2026</span>
     </section>
 
@@ -41,12 +52,21 @@
 
     <section class="details section-pad">
       <p class="eyebrow">RESERVA ESTA FECHA</p>
+
       <div class="date-card">
         <span class="day">21</span>
-        <div class="date-meta"><span>SÁBADO</span><strong>NOVIEMBRE</strong><span>2026</span></div>
+        <div class="date-meta">
+          <span>SÁBADO</span>
+          <strong>NOVIEMBRE</strong>
+          <span>2026</span>
+        </div>
         <span class="date-line"></span>
-        <div class="time"><span>HORA</span><strong>14:00</strong></div>
+        <div class="time">
+          <span>HORA</span>
+          <strong>14:00</strong>
+        </div>
       </div>
+
       <div class="venue">
         <span class="mini-label">EL LUGAR</span>
         <h2>Miami Convenciones<br>y Eventos</h2>
@@ -76,26 +96,38 @@
   <dialog id="rsvp-dialog" class="rsvp-dialog">
     <form id="rsvp-form" method="dialog">
       <button class="close" type="button" id="close-rsvp" aria-label="Cerrar">×</button>
+
       <p class="eyebrow">80 AÑOS DE TERESITA</p>
       <h2>Confirma tu asistencia</h2>
+      <p class="rsvp-family" id="rsvp-family"></p>
+
       <label>Nombre y apellido
         <input id="guest-name" name="name" required maxlength="90" placeholder="Tu nombre">
       </label>
+
       <label>¿Podrás acompañarnos?
         <select id="attendance" name="attendance" required>
           <option value="Sí, asistiré">Sí, asistiré con mucho gusto</option>
           <option value="No podré asistir">Lamentablemente no podré asistir</option>
         </select>
       </label>
+
       <label>¿Cuántas personas asistirán incluyéndote?
         <select id="guests" name="guests">
-          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
         </select>
       </label>
+
       <button class="button button-red submit" type="submit">Enviar por WhatsApp ↗</button>
       <p class="small-note">Se abrirá WhatsApp con tu respuesta lista para enviar.</p>
     </form>
   </dialog>
+
   <script src="script.js"></script>
 </body>
 </html>
