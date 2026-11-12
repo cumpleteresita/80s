@@ -90,7 +90,7 @@ const familias = {
     ninos: 0
   },
   "carlos-puebla": {
-    nombre: "Sr. Carlos Pueba y esposa",
+    nombre: "Sr. Carlos Puebla y esposa",
     contacto: "Carlos Puebla",
     adultos: 2,
     ninos: 0
@@ -276,7 +276,7 @@ const familias = {
     ninos: 0
   },
   "toya-vergara": {
-    nombre: "Sr. Edisón Garcia y esposa",
+    nombre: "Sr. Edisón García y esposa",
     contacto: "Marilyn Vergara",
     adultos: 2,
     ninos: 0
