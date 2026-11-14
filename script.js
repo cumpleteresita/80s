@@ -335,6 +335,18 @@ const familias = {
     adultos: 2,
     ninos: 0
   },
+    "stalyn-del-pozo": {
+    nombre: "Stalyn del Pozo y Esposa",
+    contacto: "Stalyn Del Pozo",
+    adultos: 2,
+    ninos: 0
+  },
+  "leon-borja": {
+    nombre: "León Borja y acompañante",
+    contacto: "Leon Borja",
+    adultos: 2,
+    ninos: 0
+  },
   "general": {
     nombre: "Una persona especial",
     contacto: "Invitado especial",
