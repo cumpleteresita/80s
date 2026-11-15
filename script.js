@@ -347,6 +347,42 @@ const familias = {
     adultos: 2,
     ninos: 0
   },
+    "geovanny-santin": {
+    nombre: "Geovanny Santin y esposa",
+    contacto: "Geovanny Santin",
+    adultos: 2,
+    ninos: 0
+  },
+  "pamela-santin": {
+    nombre: "Pamela Santin y esposo",
+    contacto: "Pamela Santin",
+    adultos: 2,
+    ninos: 0
+  },
+  "luis-ulloa": {
+    nombre: "Luis Ulloa y esposa",
+    contacto: "Luis Ulloa",
+    adultos: 2,
+    ninos: 0
+  },
+  "magdalena-moyano": {
+    nombre: "Magdalena Moyano",
+    contacto: "Magdalena Moyano",
+    adultos: 1,
+    ninos: 0
+  },
+  "hugo-hidrovo": {
+    nombre: "Hugo Hidrovo",
+    contacto: "Hugo Hidrovo",
+    adultos: 1,
+    ninos: 0
+  },
+  "raul-morales": {
+    nombre: "Raúl Morales y esposa",
+    contacto: "Raúl Morales",
+    adultos: 2,
+    ninos: 0
+  },
   "general": {
     nombre: "Una persona especial",
     contacto: "Invitado especial",
